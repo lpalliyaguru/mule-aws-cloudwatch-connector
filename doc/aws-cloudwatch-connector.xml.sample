@@ -1,0 +1,3 @@
+<!-- BEGIN_INCLUDE(aws-cloudwatch:greet) -->
+    <aws-cloudwatch:greet config-ref="" friend="#[map-payload:friend]" />
+<!-- END_INCLUDE(aws-cloudwatch:greet) -->

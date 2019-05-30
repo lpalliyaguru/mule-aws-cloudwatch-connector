@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<namespace xmlns="http://www.mulesoft.org/schema/mule/tooling.attributes" xmlns:mule="http://www.mulesoft.org/schema/mule/core" url="http://www.mulesoft.org/schema/mule/aws-cloudwatch" prefix="aws-cloudwatch">
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="AWS Cloudwatch" description="" icon="" localId="parentConfig" image="" abstract="true" extends="http://www.mulesoft.org/schema/mule/aws-cloudwatch/abstractAws-cloudwatchConnectorGeneric"></global-cloud-connector>
+  <global-cloud-connector versions="[3.5.0,8.0.0]" caption="AWS Cloudwatch: Configuration" description="Global Configuration configuration information." icon="icons/theme.classic/aws-cloudwatch-connector-small.png" localId="config" image="icons/theme.classic/aws-cloudwatch-connector-large.png" abstract="false" extends="http://www.mulesoft.org/schema/mule/aws-cloudwatch/parentConfig" connectivityTesting="off" metaData="dynamic" metaDataKeyDisplay="DISPLAY_NAME" supportsUserDefinedMetaData="false">
+    <attribute-category caption="General" description="Aws-cloudwatch configuration properties.">
+      <group id="aws-cloudwatchGenericProperties" caption="Basic Settings">
+        <name name="name" caption="Name" description="Give a name to this configuration so it can be later referenced by config-ref." required="true"></name>
+      </group>
+      <group id="general" caption="General">
+        <useMetaData name="useMetaData" caption="useMetaData"></useMetaData>
+        <string defaultValue="AWS Key ID" name="awsKey" caption="Aws Key" description="Key of AWS User credentials." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+        <string defaultValue="AWS Key Secret" name="awsSecret" caption="Aws Secret" description="Secret of AWS User credentials." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+        <string defaultValue="Cloudwatch log group name" name="logGroup" caption="Log Group" description="Region of AWS account." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+        <string defaultValue="Cloudwatch log stream name" name="logStream" caption="Log Stream" description="Region of AWS account." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+        <string defaultValue="AWS Region" name="region" caption="Region" description="Region of AWS account." supportsExpressions="false" required="false" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </global-cloud-connector>
+  <cloud-connector caption="Abstractaws-cloudwatchconnectorgeneric" description="Interact with Aws-cloudwatch." icon="icons/theme.classic/aws-cloudwatch-connector-small.png" localId="abstractAws-cloudwatchConnectorGeneric" image="icons/theme.classic/aws-cloudwatch-connector-large.png" abstract="true">
+    <attribute-category caption="General" description="General.">
+      <group id="abstractAws-cloudwatchConnectorGeneric" caption="Basic Settings">
+        <globalRef requiredType="http://www.mulesoft.org/schema/mule/aws-cloudwatch/config" name="config-ref" caption="Connector Configuration" description="Specify which configuration to use for this invocation." required="true"></globalRef>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector versions="[3.5.0,8.0.0]" aliasId="org.mule.tooling.ui.modules.core.pattern.aws-cloudwatch" caption="AWS Cloudwatch" description="" icon="icons/theme.classic/aws-cloudwatch-connector-small.png" localId="aws-cloudwatch-connector" image="icons/theme.classic/aws-cloudwatch-connector-large.png" extends="http://www.mulesoft.org/schema/mule/aws-cloudwatch/abstractAws-cloudwatchConnectorGeneric">
+    <attribute-category caption="General" description="General.">
+      <group id="aws-cloudwatchConnectorGeneric" caption="Basic Settings">
+        <modeSwitch alwaysCombo="true" name="Aws-cloudwatch operations to execute" caption="Operation" description="Operation.">
+          <no-operation abstractElement="http://www.mulesoft.org/schema/mule/aws-cloudwatch/abstractAws-cloudwatchConnectorGeneric" versions="[3.5.0,8.0.0]" connector-name="processor"></no-operation>
+          <mode modeId="http://www.mulesoft.org/schema/mule/aws-cloudwatch/log" modeLabel="Log"></mode>
+        </modeSwitch>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+  <cloud-connector returnType="java.lang.String" caption="Log" icon="icons/theme.classic/aws-cloudwatch-connector-small.png" localId="log" image="icons/theme.classic/aws-cloudwatch-connector-large.png" abstract="true" extends="http://www.mulesoft.org/schema/mule/aws-cloudwatch/abstractAws-cloudwatchConnectorGeneric" metaData="static">
+    <attribute-category caption="General" description="General.">
+      <group id="general" caption="General">
+        <type-chooser associatedConfig="config-ref" affects="AUTO" name="logType" caption="Log Type" description="" supportsExpressions="true" required="true" javaType="java.lang.String"></type-chooser>
+        <string name="message" caption="Message" description="The log message to be sent to AWS CloudWatch." required="true" javaType="java.lang.String"></string>
+      </group>
+    </attribute-category>
+  </cloud-connector>
+</namespace>
