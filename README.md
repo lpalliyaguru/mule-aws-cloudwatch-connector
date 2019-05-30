@@ -33,7 +33,7 @@ For information about usage our documentation at http://github.com/mulesoft/aws-
 
 We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link http://github.com/mulesoft/aws-cloudwatch/issues.
 
-# Items complete
+# Items to be completed
 1. Complete the "Test Connection" method 
 2. Complete the test
 3. Complete the documentation
