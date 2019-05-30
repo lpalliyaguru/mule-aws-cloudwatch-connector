@@ -7,9 +7,9 @@ import org.junit.Test;
 import org.mule.modules.awscloudwatch.AWSCloudwatchConnector;
 import org.mule.tools.devkit.ctf.junit.AbstractTestCase;
 
-public class LogTestCases extends AbstractTestCase<AWSCloudwatchConnector> {
+public class PutLogEventTestCases extends AbstractTestCase<AWSCloudwatchConnector> {
 
-	public LogTestCases() {
+	public PutLogEventTestCases() {
 		super(AWSCloudwatchConnector.class);
 	}
 
@@ -26,9 +26,9 @@ public class LogTestCases extends AbstractTestCase<AWSCloudwatchConnector> {
 	@Test
 	public void verify() {
 		java.lang.String expected = null;
+		java.lang.String logType = null;
 		java.lang.String message = null;
-		java.lang.String type = null;
-		assertEquals(getConnector().log(message, type), expected);
+		assertEquals(getConnector().putLogEvent(logType, message), expected);
 	}
 
 }

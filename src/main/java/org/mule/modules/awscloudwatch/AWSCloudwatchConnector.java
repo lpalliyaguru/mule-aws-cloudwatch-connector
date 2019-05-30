@@ -68,7 +68,7 @@ public class AWSCloudwatchConnector {
 	* @return return comment
 	*/
 	@Processor
-	public String log(@MetaDataKeyParam String logType, String message) {
+	public String putLogEvent(@MetaDataKeyParam String logType, String message) {
 		InputLogEvent logevent = new InputLogEvent().withMessage(getLoggableMessage(logType, message)).withTimestamp(System.currentTimeMillis());
 		this.logEvents.add(logevent);
 		PutLogEventsRequest request = new PutLogEventsRequest(this.logStreamGroup, this.logStreamName, this.logEvents)
