@@ -1,11 +1,10 @@
-# AWSCloudwatch Anypoint Connector
+# AWS Cloudwatch Logs Anypoint Connector
 
-[Connector description including destination service or application with]
+This connector helps to stream logs to AWS Cloudwatch log streams. The connector used AWS Java SDK
 
 # Mule supported versions
-Examples:
-Mule 3.4.x, 3.5.x
-Mule 3.4.1
+
+Mule 3.9.x
 
 # [Destination service or application name] supported versions
 Example:
