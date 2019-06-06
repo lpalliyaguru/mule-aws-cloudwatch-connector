@@ -1,22 +1,10 @@
-# AWS Cloudwatch Logs Anypoint Connector
+## AWS Cloudwatch Logs Anypoint Connector
 
-This connector helps to stream logs to AWS Cloudwatch log streams. The connector used AWS Java SDK
+This connector helps to stream logs to AWS Cloudwatch log streams. The connector uses [AWS Java SDK 1.x](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html) version to connect to AWS Cloudwatch service. 
 
-# Mule supported versions
+## Mule supported versions
 
 Mule 3.9.x
-
-# [Destination service or application name] supported versions
-Example:
-Oracle E-Business Suite 12.1 and above.
-
-#Service or application supported modules
-Example:
-Oracle CRM
-Oracle Financials
-or 
-Salesforce API v.24
-Salesforce Metadata API
 
 
 # Installation 
@@ -26,13 +14,12 @@ For released connectors you can download them from the update site in Anypoint S
 Open Anypoint Studio, go to Help → Install New Software and select Anypoint Connectors Update Site where you’ll find all avaliable connectors.
 
 #Usage
-For information about usage our documentation at http://github.com/mulesoft/aws-cloudwatch.
+For information about usage our documentation at https://github.com/lpalliyaguru/aws-cloudwatch-connector.
 
 # Reporting Issues
 
-We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link http://github.com/mulesoft/aws-cloudwatch/issues.
+We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link https://github.com/lpalliyaguru/aws-cloudwatch-connector/issues.
 
 # Items to be completed
-1. Complete the "Test Connection" method 
-2. Complete the test
-3. Complete the documentation
+1. Complete the test
+2. Complete the documentation
