@@ -32,12 +32,19 @@ import com.amazonaws.services.logs.model.InputLogEvent;
 import com.amazonaws.services.logs.model.PutLogEventsRequest;
 import com.amazonaws.services.logs.model.PutLogEventsResult;
 
+/**
+ * 
+ * This is the connector class which contains the operations of the connector. This gets the configurations from the @Config 
+ * annotation and use them accordingly for making connection to AWS with the help of AWS SDK
+ * @author Manoj LASANTHA
+ */
 @Connector(name="aws-cloudwatch", friendlyName="AWS Cloudwatch")
 @OnException(handler=ErrorHandler.class)
 public class AWSCloudwatchConnector {
 
     @Config
-    ConnectorConfig config;
+    public ConnectorConfig config;
+    
     private AWSLogsClient cwClient;
     private BasicAWSCredentials awsCreds;
     private String logStreamName;
@@ -61,7 +68,7 @@ public class AWSCloudwatchConnector {
     }
     
 	/**
-	* Logging message to the CloudWatch
+	* Send the log event to the CloudWatch
 	*
 	* @param message The log message to be sent to AWS CloudWatch
 	* @param type The type of the log message
@@ -95,14 +102,27 @@ public class AWSCloudwatchConnector {
 		return seqToken;
 	}
    
+	/**
+	 * Returns the connector configs
+	 * @return {@link ConnectorConfig}
+	 */
     public ConnectorConfig getConfig() {
         return config;
     }
-
+    
+    /**
+     * 
+     * @param config The configuration object
+     */
     public void setConfig(ConnectorConfig config) {
         this.config = config;
     }
     
+    /**
+     * The provider for the static log types. 
+     * @return {@link DefaultMetaDataKey}
+     * @throws Exception
+     */
     @MetaDataKeyRetriever
     public List<MetaDataKey> getLogTypes() throws Exception{
     	List<MetaDataKey> logTypes = new ArrayList<MetaDataKey>();
@@ -114,6 +134,12 @@ public class AWSCloudwatchConnector {
     	return logTypes;
     }
     
+    /**
+     * This returns the static type of the log event - INFO, ERROR, WARNING, DEBUG 
+     * @param key
+     * @return {@link DefaultMetaData}
+     * @throws Exception
+     */
     @MetaDataRetriever
     public MetaData getMetadata(MetaDataKey key) throws Exception { 
     	

@@ -26,6 +26,7 @@
             <url>http://repository.mulesoft.org/releases/</url>
             <layout>default</layout>
         </repository>
+        
     </repositories>
     <dependencies>
 		<dependency>
@@ -44,4 +45,13 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+<pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://repo.maven.apache.org/maven2</url>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+        </pluginRepository>
+      </pluginRepositories>
 </project>
