@@ -18,16 +18,16 @@ You can download the source code and build it with devkit to find it available o
 1. Open studio. Go to Help -> Install new software
 2. Click "Add" button. 
 3. In the "Add Repository" dialog box, click on the  "Archive" button
-4. Choose the "UpdateSte.zip" (You can download from [here](https://github.com/lpalliyaguru/aws-cloudwatch-connector/raw/master/demo/UpdateSite.zip))
+4. Choose the "UpdateSte.zip" (You can download from [here](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/demo/UpdateSite.zip))
 5. Please note that there will be several warning from the studio when you do this installation. As this is beta version of the connector, we have not sign the package yet. You can ignore those warnings. 
 
 # Usage 
 :ledger:
-For information about usage our documentation at https://github.com/lpalliyaguru/aws-cloudwatch-connector (Scroll down to README)
+For information about usage our documentation at https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector (Scroll down to README)
 
 # Reporting Issues 
 :construction:
-We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link https://github.com/lpalliyaguru/aws-cloudwatch-connector/issues.
+We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/issues.
 
 # Items to be completed
 1. Complete the test
