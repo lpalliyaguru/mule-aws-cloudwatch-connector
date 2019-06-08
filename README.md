@@ -1,39 +1,34 @@
-# AWSCloudwatch Anypoint Connector
+## AWS Cloudwatch Logs Anypoint Connector
 
-[Connector description including destination service or application with]
+This connector helps to stream logs to AWS Cloudwatch log streams. The connector uses [AWS Java SDK 1.x](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html) version to connect to AWS Cloudwatch service. 
 
-# Mule supported versions
-Examples:
-Mule 3.4.x, 3.5.x
-Mule 3.4.1
+## Mule supported versions
 
-# [Destination service or application name] supported versions
-Example:
-Oracle E-Business Suite 12.1 and above.
-
-#Service or application supported modules
-Example:
-Oracle CRM
-Oracle Financials
-or 
-Salesforce API v.24
-Salesforce Metadata API
+Mule 3.9.x
 
 
 # Installation 
-For beta connectors you can download the source code and build it with devkit to find it available on your local repository. Then you can add it to Studio
+### 1. Build yourself
+ :muscle:
+You can download the source code and build it with devkit to find it available on your local repository. Then you can add it to Studio. 
+(You can find the steps in https://docs.mulesoft.com/connector-devkit/3.9/)
 
-For released connectors you can download them from the update site in Anypoint Studio. 
-Open Anypoint Studio, go to Help → Install New Software and select Anypoint Connectors Update Site where you’ll find all avaliable connectors.
+### 2. Manually add the connector to your studio 
+:hammer:
+1. Open studio. Go to Help -> Install new software
+2. Click "Add" button. 
+3. In the "Add Repository" dialog box, click on the  "Archive" button
+4. Choose the "UpdateSte.zip" (You can download from [here](https://github.com/lpalliyaguru/aws-cloudwatch-connector/build))
+5. Please note that there will be several warning from the studio when you do this installation. As this is beta version of the connector, we have not sign the package yet. You can ignore those warnings. 
 
-#Usage
-For information about usage our documentation at http://github.com/mulesoft/aws-cloudwatch.
+# Usage 
+:ledger:
+For information about usage our documentation at https://github.com/lpalliyaguru/aws-cloudwatch-connector (Scroll down to README)
 
-# Reporting Issues
-
-We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link http://github.com/mulesoft/aws-cloudwatch/issues.
+# Reporting Issues 
+:construction:
+We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link https://github.com/lpalliyaguru/aws-cloudwatch-connector/issues.
 
 # Items to be completed
-1. Complete the "Test Connection" method 
-2. Complete the test
-3. Complete the documentation
+1. Complete the test
+2. Complete the documentation
