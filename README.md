@@ -8,9 +8,11 @@ Mule 3.9.x
 
 
 # Installation 
-For beta connectors you can download the source code and build it with devkit to find it available on your local repository. Then you can add it to Studio
+### 1. Build yourself
+You can download the source code and build it with devkit to find it available on your local repository. Then you can add it to Studio. 
+(You can find the steps in https://docs.mulesoft.com/connector-devkit/3.9/)
 
-## Manually add the connector to your studio
+### 2. Manually add the connector to your studio
 1. Open studio. Go to Help -> Install new software
 2. Click "Add" button. 
 3. In the "Add Repository" dialog box, click on the  "Archive" button
