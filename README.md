@@ -10,6 +10,13 @@ Mule 3.9.x
 # Installation 
 For beta connectors you can download the source code and build it with devkit to find it available on your local repository. Then you can add it to Studio
 
+## Manually add the connector to your studio
+1. Open studio. Go to Help -> Install new software
+2. Click "Add" button. 
+3. In the "Add Repository" dialog box, click on the  "Archive" button
+4. Choose the "UpdateSte.zip" (You can download from [here](https://github.com/lpalliyaguru/aws-cloudwatch-connector/build))
+5. Please note that there will be several warning from the studio when you do this installation. As this is beta version of the connector, we have not sign the package yet. You can ignore those warnings. 
+
 For released connectors you can download them from the update site in Anypoint Studio. 
 Open Anypoint Studio, go to Help → Install New Software and select Anypoint Connectors Update Site where you’ll find all avaliable connectors.
 
