@@ -18,7 +18,7 @@ You can download the source code and build it with devkit to find it available o
 1. Open studio. Go to Help -> Install new software
 2. Click "Add" button. 
 3. In the "Add Repository" dialog box, click on the  "Archive" button
-4. Choose the "UpdateSte.zip" (You can download from [here](https://github.com/lpalliyaguru/aws-cloudwatch-connector/build))
+4. Choose the "UpdateSte.zip" (You can download from [here](https://github.com/lpalliyaguru/aws-cloudwatch-connector/raw/master/demo/UpdateSite.zip))
 5. Please note that there will be several warning from the studio when you do this installation. As this is beta version of the connector, we have not sign the package yet. You can ignore those warnings. 
 
 # Usage 
