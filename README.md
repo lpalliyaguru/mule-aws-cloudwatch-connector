@@ -17,11 +17,8 @@ For beta connectors you can download the source code and build it with devkit to
 4. Choose the "UpdateSte.zip" (You can download from [here](https://github.com/lpalliyaguru/aws-cloudwatch-connector/build))
 5. Please note that there will be several warning from the studio when you do this installation. As this is beta version of the connector, we have not sign the package yet. You can ignore those warnings. 
 
-For released connectors you can download them from the update site in Anypoint Studio. 
-Open Anypoint Studio, go to Help → Install New Software and select Anypoint Connectors Update Site where you’ll find all avaliable connectors.
-
-#Usage
-For information about usage our documentation at https://github.com/lpalliyaguru/aws-cloudwatch-connector.
+# Usage
+For information about usage our documentation at https://github.com/lpalliyaguru/aws-cloudwatch-connector (Scroll down to README)
 
 # Reporting Issues
 
