@@ -33,7 +33,7 @@ You can download the source code and build it with devkit to find it available o
 6. Enter correct configuration details in the fields. Normally, it is recommended to create a IAM Service user in your aws account and assing only cloudwatch access. If needed, provide only access to the particular log group and stream. 
 ![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/images/in-config-pallete.png)
 7. Also, it is recommended to configure the credentials in the properties and user the as reference in these fields. 
-![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/images/reference-config.png)
+![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images.png)
 8. Click on the "Test Connection" button. If all configs are correct, the connection should successful. 
 ![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/images/connection-success.png)
 
