@@ -1,0 +1,12 @@
+org.mule.modules.awscloudwatch
+org.mule.modules.awscloudwatch.automation.functional
+org.mule.modules.awscloudwatch.automation.runner
+org.mule.modules.awscloudwatch.config
+org.mule.modules.awscloudwatch.error
+org.mule.modules.awscloudwatch.generated.adapter
+org.mule.modules.awscloudwatch.generated.adapters
+org.mule.modules.awscloudwatch.generated.agents
+org.mule.modules.awscloudwatch.generated.config
+org.mule.modules.awscloudwatch.generated.devkit
+org.mule.modules.awscloudwatch.generated.processors
+org.mule.tooling.ui.contribution

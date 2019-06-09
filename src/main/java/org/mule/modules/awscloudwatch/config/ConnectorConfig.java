@@ -91,12 +91,13 @@ public class ConnectorConfig {
      *
      * @param awsKey the AWS Key ID
      */
-    public void setAwsKey(String key) {
-        this.awsKey = key;
+    public void setAwsKey(String awsKey) {
+        this.awsKey = awsKey;
     }
 
     /**
      * Get awsKey
+     * @return String
      */
     public String getAwsKey() {
         return this.awsKey;
@@ -107,12 +108,13 @@ public class ConnectorConfig {
      *
      * @param awsSecret the AWS Secret
      */
-    public void setAwsSecret(String secret) {
-        this.awsSecret = secret;
+    public void setAwsSecret(String awsSecret) {
+        this.awsSecret = awsSecret;
     }
 
     /**
      * Get awsSecret
+     * @return String
      */
     public String getAwsSecret() {
         return this.awsSecret;
@@ -121,7 +123,7 @@ public class ConnectorConfig {
     /**
      * Set AWS Secret
      *
-     * @param awsSecret the AWS Secret
+     * @param region the AWS Region which cloudwatch log groups are created
      */
     public void setRegion(String region) {
         this.region = region;
@@ -129,6 +131,7 @@ public class ConnectorConfig {
 
     /**
      * Get awsSecret
+     * @return String
      */
     public String getRegion() {
         return this.region;
@@ -145,6 +148,7 @@ public class ConnectorConfig {
 
     /**
      * Get AWS Log group name
+     * @return String
      */
     public String getLogGroup() {
         return this.logGroup;
@@ -161,6 +165,7 @@ public class ConnectorConfig {
 
     /**
      * Get AWS log stream name
+     * @return String
      */
     public String getLogStream() {
         return this.logStream;
