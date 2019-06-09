@@ -27,12 +27,30 @@
             <layout>default</layout>
         </repository>
         
+        <repository>
+            <id>mulesoft-snapshots</id>
+            <name>MuleSoft Snapshots Repository</name>
+            <url>http://repository.mulesoft.org/snapshots/</url>
+            <layout>default</layout>
+        </repository>
     </repositories>
     <dependencies>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk-logs</artifactId>
 		</dependency>
+		<dependency>
+    <groupId>org.mule.tools.devkit</groupId>
+    <artifactId>connector-testing-framework</artifactId>
+    <version>1.0.6</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.9.9</version>
+</dependency>
+
 	</dependencies>
     <dependencyManagement>
 		<dependencies>
