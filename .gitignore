@@ -1,4 +1,8 @@
 target/*
+!target/UpdateSite.zip
+!target/aws-cloudwatch-connector-1.0.0-SNAPSHOT.jar
 .settings/
+
 .classpath
+
 src/test/resources/automation-credentials.properties
