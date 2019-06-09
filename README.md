@@ -38,7 +38,7 @@ You can download the source code and build it with devkit to find it available o
 5. Please note that there will be several warning from the studio when you do this installation. As this is beta version of the connector, we have not sign the package yet. You can ignore those warnings. 
 
 # Usage 
-:ledger:
+
 1. After you install the connector, it will appear in your mule pallete.
 ![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/in-mule-pallete.PNG)
 2. Simply drag and drop the connector in to the canvas. 
