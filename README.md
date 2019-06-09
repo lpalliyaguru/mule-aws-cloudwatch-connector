@@ -43,6 +43,3 @@ You can download the source code and build it with devkit to find it available o
 :construction:
 We use GitHub:Issues for tracking issues with this connector. You can report new issues at this link https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/issues.
 
-# Items to be completed
-1. Complete the test
-2. Complete the documentation
