@@ -20,8 +20,8 @@ If you have a case where you want to send only desired logs which happen on busi
 ## Releases
 Please see the [release notes](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/releases)
 
-## Documentation
-Visit the [docs](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/releases)
+## Java Documentation
+Visit the [docs](https://lpalliyaguru.github.io/mule-aws-cloudwatch-connector/)
 
 # Installation 
 ### 1. Build yourself
