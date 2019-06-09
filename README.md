@@ -24,7 +24,7 @@ You can download the source code and build it with devkit to find it available o
 # Usage 
 :ledger:
 1. After you install the connector, it will appear in your mule pallete.
-![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/images/in-mule-pallete.png)
+![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/in-mule-pallete.png)
 2. Simply drag and drop the connector in to the canvas. 
 3. After that you need to configure the connector. 
 4. Click on the connector and go to the Mule Properties tab
