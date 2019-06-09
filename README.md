@@ -24,18 +24,18 @@ You can download the source code and build it with devkit to find it available o
 # Usage 
 :ledger:
 1. After you install the connector, it will appear in your mule pallete.
-![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/in-mule-pallete.png)
+![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/in-mule-pallete.PNG)
 2. Simply drag and drop the connector in to the canvas. 
 3. After that you need to configure the connector. 
 4. Click on the connector and go to the Mule Properties tab
-![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/images/in-config-pallete.png)
+![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/in-config-pallete.PNG)
 5. Click on the add icon in front of the "Connector Configurations" drop down
 6. Enter correct configuration details in the fields. Normally, it is recommended to create a IAM Service user in your aws account and assing only cloudwatch access. If needed, provide only access to the particular log group and stream. 
-![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/images/in-config-pallete.png)
+![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/in-config-pallete.PNG)
 7. Also, it is recommended to configure the credentials in the properties and user the as reference in these fields. 
-![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images.png)
+![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/test-connection.PNG)
 8. Click on the "Test Connection" button. If all configs are correct, the connection should successful. 
-![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/images/connection-success.png)
+![](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/raw/master/images/connection-success.PNG)
 
 
 
