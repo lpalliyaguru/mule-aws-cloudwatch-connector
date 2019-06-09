@@ -121,10 +121,9 @@ public class AWSCloudwatchConnector {
     /**
      * The provider for the static log types. 
      * @return {@link DefaultMetaDataKey}
-     * @throws Exception
      */
     @MetaDataKeyRetriever
-    public List<MetaDataKey> getLogTypes() throws Exception{
+    public List<MetaDataKey> getLogTypes() {
     	List<MetaDataKey> logTypes = new ArrayList<MetaDataKey>();
     	logTypes.add(new DefaultMetaDataKey("INFO", "INFO"));
     	logTypes.add(new DefaultMetaDataKey("ERROR", "ERROR"));
@@ -136,9 +135,9 @@ public class AWSCloudwatchConnector {
     
     /**
      * This returns the static type of the log event - INFO, ERROR, WARNING, DEBUG 
-     * @param key
+     * @param key {@link MetaDataKey}
      * @return {@link DefaultMetaData}
-     * @throws Exception
+     * @throws Exception Throws an Runtime exception when the provided key is not in the supported list.
      */
     @MetaDataRetriever
     public MetaData getMetadata(MetaDataKey key) throws Exception { 
