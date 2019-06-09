@@ -6,10 +6,13 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 import org.mule.modules.awscloudwatch.AWSCloudwatchConnector;
+import org.mule.modules.awscloudwatch.automation.functional.PutLogEventTestCases;
 import org.mule.tools.devkit.ctf.mockup.ConnectorTestContext;
 
 @RunWith(Suite.class)
-@SuiteClasses({})
+@SuiteClasses({
+	PutLogEventTestCases.class
+})
 
 public class FunctionalTestSuite {
 

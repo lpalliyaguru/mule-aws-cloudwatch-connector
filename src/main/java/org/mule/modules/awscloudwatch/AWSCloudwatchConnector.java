@@ -71,18 +71,18 @@ public class AWSCloudwatchConnector {
 	* Send the log event to the CloudWatch
 	*
 	* @param message The log message to be sent to AWS CloudWatch
-	* @param type The type of the log message
+	* @param logType The type of the log message
 	* @return return comment
 	*/
 	@Processor
-	public String putLogEvent(@MetaDataKeyParam String logType, String message) {
+	public boolean putLogEvent(@MetaDataKeyParam String logType, String message) {
 		InputLogEvent logevent = new InputLogEvent().withMessage(getLoggableMessage(logType, message)).withTimestamp(System.currentTimeMillis());
 		this.logEvents.add(logevent);
 		PutLogEventsRequest request = new PutLogEventsRequest(this.logStreamGroup, this.logStreamName, this.logEvents)
 				.withSequenceToken(this.getUploadSequenceToken());
 		this.logEvents.removeAll(request.getLogEvents());
 		PutLogEventsResult result = this.cwClient.putLogEvents(request);
-        return result.toString();
+        return result.getNextSequenceToken() != null;
 	}
 	
 	/**
