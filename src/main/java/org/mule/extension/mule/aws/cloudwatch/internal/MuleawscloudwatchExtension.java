@@ -1,7 +1,7 @@
 package org.mule.extension.mule.aws.cloudwatch.internal;
 
-import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Configurations;
+import org.mule.runtime.extension.api.annotation.Extension;
 import org.mule.runtime.extension.api.annotation.Operations;
 import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProviders;
 import org.mule.runtime.extension.api.annotation.dsl.xml.Xml;
@@ -13,8 +13,7 @@ import org.mule.runtime.extension.api.annotation.dsl.xml.Xml;
  */
 @Xml(prefix = "mule-aws-cloudwatch")
 @Extension(name = "Amazon Cloudwatch")
-@Operations(MuleawscloudwatchLogsOperations.class)
-@ConnectionProviders({MuleawscloudwatchConnectionProvider.class})
+@Configurations({MuleawscloudwatchConfiguration.class})
 public class MuleawscloudwatchExtension {
 
 }

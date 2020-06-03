@@ -5,11 +5,11 @@
           http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch/current/mule-mule-aws-cloudwatch.xsd">
 
     <mule-aws-cloudwatch:config name="config" configId="configId">
-        <mule-aws-cloudwatch:connection awsAccessKey="key" awsSecretKey="secret"  awsRegion="region" />
+        <mule-aws-cloudwatch:connection awsAccessKey="${aws.access_key}" awsSecretKey="${aws.secret_key}"  awsRegion="ap-southeast-1" />
     </mule-aws-cloudwatch:config>
 
     <flow name="putLogEventsFlow">
-        <mule-aws-cloudwatch:put-log-events config-ref="config" logMessage="Loggable Message"/>
+        <mule-aws-cloudwatch:put-log-events config-ref="config" logMessage="Loggable Message" logGroupName="esb" logStreamName="int-business-data-errors"/>
     </flow>
 
 </mule>

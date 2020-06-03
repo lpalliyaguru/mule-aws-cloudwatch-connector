@@ -8,8 +8,8 @@ import org.mule.runtime.extension.api.annotation.param.Parameter;
  * This class represents an extension configuration, values set in this class are commonly used across multiple
  * operations since they represent something core from the extension.
  */
-@Operations(MuleawscloudwatchLogsOperations.class)
-@ConnectionProviders(MuleawscloudwatchConnectionProvider.class)
+@Operations({ MuleawscloudwatchLogsOperations.class })
+@ConnectionProviders( { MuleawscloudwatchConnectionProvider.class})
 public class MuleawscloudwatchConfiguration {
 
   @Parameter
