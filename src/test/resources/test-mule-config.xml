@@ -1,0 +1,15 @@
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:mule-aws-cloudwatch="http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch"
+      xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+          http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch/current/mule-mule-aws-cloudwatch.xsd">
+
+    <mule-aws-cloudwatch:config name="config" configId="configId">
+        <mule-aws-cloudwatch:connection awsAccessKey="key" awsSecretKey="secret"  awsRegion="region" />
+    </mule-aws-cloudwatch:config>
+
+    <flow name="putLogEventsFlow">
+        <mule-aws-cloudwatch:put-log-events config-ref="config" logMessage="Loggable Message"/>
+    </flow>
+
+</mule>
