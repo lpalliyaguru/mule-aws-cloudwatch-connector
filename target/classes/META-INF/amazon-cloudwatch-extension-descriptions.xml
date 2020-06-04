@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension-documentation>
+    <configs>
+        <config name="config">
+            <description><![CDATA[Default configuration]]></description>
+            <parameters>
+                <parameter name="configId">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="name">
+                    <description><![CDATA[The identifier of this element used to reference it in other components]]></description>
+                </parameter>
+                <parameter name="expirationPolicy">
+                    <description><![CDATA[Configures the minimum amount of time that a dynamic configuration instance can remain idle before the runtime considers it eligible for expiration. This does not mean that the platform will expire the instance at the exact moment that it becomes eligible. The runtime will actually purge the instances when it sees it fit.]]></description>
+                </parameter>
+            </parameters>
+        </config>
+    </configs>
+    <connections>
+        <connection name="connection">
+            <description><![CDATA[]]></description>
+            <parameters>
+                <parameter name="awsAccessKey">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="awsSecretKey">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="awsRegion">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="reconnection">
+                    <description><![CDATA[When the application is deployed, a connectivity test is performed on all connectors. If set to true, deployment will fail if the test doesn't pass after exhausting the associated reconnection strategy]]></description>
+                </parameter>
+                <parameter name="poolingProfile">
+                    <description><![CDATA[Characteristics of the connection pool]]></description>
+                </parameter>
+            </parameters>
+        </connection>
+    </connections>
+    <extension name="Amazon Cloudwatch">
+        <description><![CDATA[This is the main class of an extension, is the entry point from which configurations, connection providers, operations and sources are going to be declared.]]></description>
+        <parameters/>
+    </extension>
+    <operations>
+        <operation name="FilterLogEvents">
+            <description><![CDATA[]]></description>
+            <parameters>
+                <parameter name="logGroupName">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="logStreamName">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="filterPattern">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="startTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="endTime">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="limit">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="nextToken">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="config-ref">
+                    <description><![CDATA[The name of the configuration to be used to execute this component]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="putLogEvents">
+            <description><![CDATA[Example of an operation that uses the configuration and a connection instance to perform some action.]]></description>
+            <parameters>
+                <parameter name="logGroupName">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="logStreamName">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="logMessage">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="logType">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="outputMimeType">
+                    <description><![CDATA[The mime type of the payload that this operation outputs.]]></description>
+                </parameter>
+                <parameter name="config-ref">
+                    <description><![CDATA[The name of the configuration to be used to execute this component]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+        <operation name="putMetricData">
+            <description><![CDATA[AWS API Documentation: https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricData.html]]></description>
+            <parameters>
+                <parameter name="metricNameSpace">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="dimentionName">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="dimentionValue">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="metricDatums">
+                    <description><![CDATA[]]></description>
+                </parameter>
+                <parameter name="config-ref">
+                    <description><![CDATA[The name of the configuration to be used to execute this component]]></description>
+                </parameter>
+                <parameter name="target">
+                    <description><![CDATA[The name of a variable on which the operation's output will be placed]]></description>
+                </parameter>
+                <parameter name="targetValue">
+                    <description><![CDATA[An expression that will be evaluated against the operation's output and the outcome of that expression will be stored in the target variable]]></description>
+                </parameter>
+                <parameter name="reconnectionStrategy">
+                    <description><![CDATA[A retry strategy in case of connectivity errors]]></description>
+                </parameter>
+            </parameters>
+        </operation>
+    </operations>
+    <sources/>
+    <types/>
+</extension-documentation>
