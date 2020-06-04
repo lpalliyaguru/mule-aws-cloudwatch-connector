@@ -28,9 +28,6 @@ public class OutputEntityResolver implements OutputTypeResolver<String>, Attribu
     public MetadataType getAttributesType(MetadataContext context, String key)
             throws MetadataResolvingException, ConnectionException {
 
-
-
-        // Only Books have Attributes information
         return context.getTypeBuilder().nullType().build();
     }
 }

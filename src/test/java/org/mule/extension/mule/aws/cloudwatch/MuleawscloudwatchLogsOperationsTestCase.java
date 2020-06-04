@@ -19,6 +19,7 @@ public class MuleawscloudwatchLogsOperationsTestCase extends MuleArtifactFunctio
   protected String getConfigFile() {
     return "test-mule-config.xml";
   }
+/*
 
   @Test
   public void executeputLogEventsOperation() throws Exception  {
@@ -27,7 +28,7 @@ public class MuleawscloudwatchLogsOperationsTestCase extends MuleArtifactFunctio
             .getPayload()
             .getValue());
     assertThat(payloadValue, is("LOG: Loggable Message"));
-  }
+  }*/
 
   @Test
   public void executefilterLogEventsOperation() throws Exception  {
@@ -38,4 +39,15 @@ public class MuleawscloudwatchLogsOperationsTestCase extends MuleArtifactFunctio
     assertThat(payloadValue, IsNull.notNullValue());
 
   }
+
+
+  /*@Test
+  public void executeputMetricDataOperation() throws Exception  {
+    boolean payloadValue = (boolean)flowRunner("putMetricDataFlow").run()
+            .getMessage()
+            .getPayload()
+            .getValue();
+    assertThat(payloadValue, is(true));
+
+  }*/
 }

@@ -21,4 +21,13 @@
                 endTime="2020-06-04T00:00:00.000Z"
         />
     </flow>
+    <flow name="putMetricDataFlow">
+        <mule-aws-cloudwatch:put-metric-data
+                config-ref="config"
+                metricNameSpace="AIP/Ops"
+                dimentionName="Contact"
+                dimentionValue="contact"
+                metricDatums="[{metricName: 'metricName', unitValue: '2.00'}]"
+        />
+    </flow>
 </mule>
