@@ -18,10 +18,10 @@ Other alternative is use a log appender such as [logback](https://logback.qos.ch
 If you have a case where you want to send only desired logs which happen on business events, thig might be an ideal connector to use with. 
 
 ## Releases
-Please see the [Release notes](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/doc/release-notes.adoc)
+Please see the [Release notes](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/blob/4.x/doc/release-notes.adoc)
 
 ## Java Documentation
-Visit the [Documentation](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/documentation/user-manual.adoc)
+Visit the [Documentation](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/blob/4.x/doc/user-manual.adoc)
 
 # Manual 
 Visit the [User manual](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/doc/user-manual.adoc)
