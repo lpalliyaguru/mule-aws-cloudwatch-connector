@@ -67,7 +67,7 @@ Follow these steps to configure the parameters of the connector in a flow:
 7. It is recommended to configure the credentials in the properties and user the as reference in these fields.
 
 +
-image::global_config.png[global_config]
+image::img-global_config.png[global_config]
 +
 
 === Operations
@@ -76,31 +76,31 @@ image::global_config.png[global_config]
 This operations can be used to send a log message to AWS Cloudwatch
 
 +
-image::put-log-events-config.png[put-log-events-config]
+image::img-put-log-events-config.png[put-log-events-config]
 +
 
 +
-image::put-log-events-properties.png[put-log-events-properties]
+image::img-put-log-events-properties.png[put-log-events-properties]
 +
 
 2. link:https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_FilterLogEvents.html[Filter Log Events]
 This operation can be used to search log messages from AWS cloudwatch
 
 +
-image::filter-log-events-config.png[filter-log-events-config]
+image::img-img-filter-log-events-config.png[filter-log-events-config]
 +
 
 +
-image::filter-log-events-properties.png[filter-log-events-properties]
+image::img-filter-log-events-properties.png[filter-log-events-properties]
 +
 
 3. link:https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricData.html[Put Metric Data]
 
 
 +
-image::put-metric-data-config.png[put-metric-data-config]
+image::img-put-metric-data-config.png[put-metric-data-config]
 +
 
 +
-image::put-metric-data-properties.png[put-metric-data-properties]
+image::img-put-metric-data-properties.png[put-metric-data-properties]
 +
