@@ -1,9 +1,9 @@
+/*
+ * Copyright (c) 2020.  The software in this package is published under the terms of the Apache License, Version 2.0 (the "License"),  a copy of which has been included with this distribution in the LICENSE.md file.
+ */
+
 package org.mule.extension.mule.aws.cloudwatch.internal;
 
-import com.amazonaws.auth.AWSStaticCredentialsProvider;
-import com.amazonaws.auth.BasicAWSCredentials;
-import com.amazonaws.services.cloudwatch.AmazonCloudWatch;
-import com.amazonaws.services.cloudwatch.AmazonCloudWatchClientBuilder;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.Optional;
@@ -63,7 +63,7 @@ public class MuleawscloudwatchConnectionProvider implements PoolingConnectionPro
     try {
         connection.invalidate();
     } catch (Exception e) {
-        LOGGER.error("Error while disconnecting [" + connection.getId() + "]: " + e.getMessage(), e);
+        LOGGER.error("Error while disconnecting " + e.getMessage(), e);
     }
   }
 

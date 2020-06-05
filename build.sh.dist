@@ -1,2 +1,2 @@
 #!/bin/bash
-mvn clean install -Daws.access_key=<ACCESS KEY> -Daws.secret_key=<SECRET KEY>
+mvn clean install -Daws.access_key=<ACCESS KEY> -Daws.secret_key=<SECRET KEY>  -Daws.log_group=<LOG GROUP> -Daws.log_stream=<LOG STREAM>

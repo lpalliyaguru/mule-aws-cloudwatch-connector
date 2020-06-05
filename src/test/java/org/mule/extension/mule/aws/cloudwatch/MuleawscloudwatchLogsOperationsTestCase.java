@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020.  The software in this package is published under the terms of the Apache License, Version 2.0 (the "License"),  a copy of which has been included with this distribution in the LICENSE.md file.
+ */
+
 package org.mule.extension.mule.aws.cloudwatch;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -19,16 +23,15 @@ public class MuleawscloudwatchLogsOperationsTestCase extends MuleArtifactFunctio
   protected String getConfigFile() {
     return "test-mule-config.xml";
   }
-/*
 
   @Test
   public void executeputLogEventsOperation() throws Exception  {
-    String payloadValue = ((String) flowRunner("putLogEventsFlow").run()
+    boolean payloadValue = (boolean) flowRunner( "putLogEventsFlow").run()
             .getMessage()
             .getPayload()
-            .getValue());
-    assertThat(payloadValue, is("LOG: Loggable Message"));
-  }*/
+            .getValue();
+    assertThat(payloadValue, is(true));
+  }
 
   @Test
   public void executefilterLogEventsOperation() throws Exception  {
@@ -40,8 +43,7 @@ public class MuleawscloudwatchLogsOperationsTestCase extends MuleArtifactFunctio
 
   }
 
-
-  /*@Test
+  @Test
   public void executeputMetricDataOperation() throws Exception  {
     boolean payloadValue = (boolean)flowRunner("putMetricDataFlow").run()
             .getMessage()
@@ -49,5 +51,5 @@ public class MuleawscloudwatchLogsOperationsTestCase extends MuleArtifactFunctio
             .getValue();
     assertThat(payloadValue, is(true));
 
-  }*/
+  }
 }

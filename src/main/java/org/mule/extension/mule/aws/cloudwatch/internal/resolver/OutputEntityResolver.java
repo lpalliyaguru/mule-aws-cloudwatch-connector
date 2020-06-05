@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2020.  The software in this package is published under the terms of the Apache License, Version 2.0 (the "License"),  a copy of which has been included with this distribution in the LICENSE.md file.
+ */
+
 package org.mule.extension.mule.aws.cloudwatch.internal.resolver;
 
 import com.amazonaws.services.logs.model.FilterLogEventsResult;
@@ -18,6 +22,7 @@ public class OutputEntityResolver implements OutputTypeResolver<String>, Attribu
     public String getResolverName() {
         return "OutputEntityResolver";
     }
+
     @Override
     public MetadataType getOutputType(MetadataContext context, String key)
             throws MetadataResolvingException, ConnectionException {

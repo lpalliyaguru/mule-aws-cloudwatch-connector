@@ -1,0 +1,73 @@
+= Mule AWS CloudWatch Release Notes
+:keywords: release notes, connectors, INSEAD
+:imagesdir: ..\images
+:toc: macro
+
+:source-highlighter: prettify
+
+:!numbered:
+
+[green]#Community#
+
+== Introduction
+
+This connector was built in the absence of AWS cloudwatch connector in the marketplace. I have had several use cases where we need to publish logs to AWS Cloudwatch for longer retentions, better search and better analysis.
+
+We are planning to add other sub-services of AWS Cloudwatch as connector operations in the coming releases.
+
+== Mule supported versions
+Mule 4.2.x or higher versions
+
+=== Prerequisites
+
+This document assumes you are familiar with Mule, link:/mule-user-guide/v/3.7/anypoint-connectors[Anypoint Connectors],
+and link:/mule-fundamentals/v/3.7/anypoint-studio-essentials[Anypoint Studio Essentials]. To increase your familiarity with Studio,
+consider completing one or more link:/mule-fundamentals/v/3.7/basic-studio-tutorial[Anypoint Studio Tutorials]. Further,
+this page assumes that you have a basic understanding of link:/mule-fundamentals/v/3.7/elements-in-a-mule-flow[Elements in a Mule Flow] and link:/mule-fundamentals/v/3.7/global-elements[Mule Global Elements].
+
+This document describes implementation examples within the context of Anypoint Studio, Mule ESB’s graphical user interface, and, in parallel,
+includes configuration details for doing the same in the XML Editor.
+
+=== Dependencies
+
+The connector uses link:https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/index.html[AWS Java SDK 1.x] version to connect to AWS Cloudwatch service.
+
+
+=== Compatibility Matrix
+
+[width="100%", options="header"]
+|=======
+|Application/Service |Version
+|Mule Runtime	| 4.2.0 or higher
+|=======
+
+== Installing and Configuring
+
+=== Installing
+You can install the connector with the help of Maven.
+
+Maven dependency:
+<dependency>
+    <groupId>com.mulesoft-connectors</groupId>
+    <artifactId>mule-aws-cloudwatch-connector</artifactId>
+    <version>1.0.0</version>
+    <classifier>mule-plugin</classifier>
+</dependency>
+
+=== Configuring the Connector in a Flow
+
+Follow these steps to configure the parameters of the connector in a flow:
+
+. Drag the connector onto the canvas, then select it to open the Properties Editor console.
+
+1. After you install the connector, it will appear in your mule pallete.
+2. Simply drag and drop the connector in to the canvas.
+3. After that you need to configure the connector.
+4. Click on the connector and go to the Mule Properties tab
+5. Click on the add icon in front of the "Connector Configurations" drop down
+6. Enter correct configuration details in the fields. Normally, it is recommended to create a IAM Service user in your aws account and assing only cloudwatch access. If needed, provide only access to the particular log group and stream.
+7. It is recommended to configure the credentials in the properties and user the as reference in these fields.
+
++
+image::global_config.png[global_config]
++

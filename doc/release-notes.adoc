@@ -1,0 +1,50 @@
+= Mule AWS CloudWatch Release Notes
+:keywords: release notes, connectors, INSEAD
+:toc: macro
+
+:source-highlighter: prettify
+
+:!numbered:
+
+[green]#Community#
+
+This connector was built in the absence of AWS cloudwatch connector in the marketplace. I have had several use cases where we need to publish logs to AWS Cloudwatch for longer retentions, better search and better analysis.
+
+
+We are planning to add other sub-services of AWS Cloudwatch as connector operations in the coming releases.
+
+The connector uses AWS Java SDK 1.x version to connect to AWS Cloudwatch service.
+toc::[]
+
+== Version 1.0.0 - June 05, 2020
+
+=== Compatibility
+
+The AWS Cloudwatch Connector v1.0.0 is compatible with:
+
+[cols="2*",width="50%",options="header"]
+|===
+| Application/Service | Version
+|Mule Runtime	| 4.2.0 or higher
+|===
+
+=== Supported Operations:
+* put-log-events
+* filter-log-events
+* put-metric-data
+
+=== Features and Functionality
+
+* Initial operations have been added.
+
+=== Fixed in this Release
+None.
+
+=== Known Issues
+None.
+
+== See Also
+
+* Learn how to http://www.mulesoft.org/documentation/display/current/Anypoint+Exchange#AnypointExchange-InstallingaConnectorfromAnypointExchange[Install Anypoint Connectors] using Anypoint Exchange.
+* Access MuleSoft’s http://forum.mulesoft.org/mulesoft[Forum] to pose questions and get help from Mule’s broad community of users.
+* To access MuleSoft’s expert support team, http://www.mulesoft.com/mule-esb-subscription[subscribe] to Mule ESB Enterprise and log into MuleSoft’s http://www.mulesoft.com/support-login[Customer Portal].

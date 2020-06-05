@@ -1,22 +1,26 @@
+<!--
+  ~ Copyright (c) 2020.  The software in this package is published under the terms of the Apache License, Version 2.0 (the "License"),  a copy of which has been included with this distribution in the LICENSE.md file.
+  -->
+
 <mule xmlns="http://www.mulesoft.org/schema/mule/core"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns:mule-aws-cloudwatch="http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch"
       xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
           http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch/current/mule-mule-aws-cloudwatch.xsd">
 
-    <mule-aws-cloudwatch:config name="config" configId="configId">
+    <mule-aws-cloudwatch:config name="config">
         <mule-aws-cloudwatch:connection awsAccessKey="${aws.access_key}" awsSecretKey="${aws.secret_key}"  awsRegion="ap-southeast-1" />
     </mule-aws-cloudwatch:config>
 
     <flow name="putLogEventsFlow">
-        <mule-aws-cloudwatch:put-log-events config-ref="config" logMessage="Loggable Message" logGroupName="esb" logStreamName="int-business-data-errors" logType="WARN"/>
+        <mule-aws-cloudwatch:put-log-events config-ref="config" logMessage="Test Message from Flow runner" logGroupName="${aws.log_group}" logStreamName="${aws.log_stream}"/>
     </flow>
     <flow name="filterLogEventsFlow">
         <mule-aws-cloudwatch:filter-log-events
                 config-ref="config"
                 filterPattern="Loggable"
-                logGroupName="esb"
-                logStreamName="int-business-data-errors"
+                logGroupName="${aws.log_group}"
+                logStreamName="${aws.log_stream}"
                 startTime="2020-06-02T00:00:00.000Z"
                 endTime="2020-06-04T00:00:00.000Z"
         />
@@ -25,9 +29,9 @@
         <mule-aws-cloudwatch:put-metric-data
                 config-ref="config"
                 metricNameSpace="AIP/Ops"
-                dimentionName="Contact"
-                dimentionValue="contact"
-                metricDatums="[{metricName: 'metricName', unitValue: '2.00'}]"
+                dimensionName="Contact"
+                dimensionValue="contact"
+                metricDatums="#[[{metricName: 'metricName', unitValue: 2.10}]]"
         />
     </flow>
 </mule>

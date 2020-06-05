@@ -1,5 +1,8 @@
-package org.mule.extension.mule.aws.cloudwatch.internal;
+/*
+ * Copyright (c) 2020.  The software in this package is published under the terms of the Apache License, Version 2.0 (the "License"),  a copy of which has been included with this distribution in the LICENSE.md file.
+ */
 
+package org.mule.extension.mule.aws.cloudwatch.internal;
 
 import com.amazonaws.auth.AWSStaticCredentialsProvider;
 import com.amazonaws.auth.BasicAWSCredentials;
@@ -9,16 +12,14 @@ import com.amazonaws.services.logs.AWSLogsClient;
 import com.amazonaws.services.logs.AWSLogsClientBuilder;
 
 /**
- * This class represents an extension connection just as example (there is no real connection with anything here c:).
+ * This class provides the AWS Cloudwatch and AWS CloudwatchLogs connections
  */
 public final class MuleawscloudwatchConnection {
 
   public AmazonCloudWatch awsCloudWatch;
   public AWSLogsClient awsCloudWatchLogClient;
-  public String id;
 
   public MuleawscloudwatchConnection(String key, String secret, String region) {
-    this.id = "aws-connection";
     this.initCloudwatch(key, secret, region);
   }
 
@@ -26,6 +27,12 @@ public final class MuleawscloudwatchConnection {
     return awsCloudWatchLogClient;
   }
 
+  /**
+   * Method to initialize the connections
+   * @param key AWS Key
+   * @param secret AWS Secret
+   * @param region AWS region
+   */
   private void initCloudwatch(String key, String secret, String region) {
     BasicAWSCredentials credentials       = new BasicAWSCredentials(key, secret);
     AWSStaticCredentialsProvider provider = new AWSStaticCredentialsProvider(credentials);
@@ -41,16 +48,11 @@ public final class MuleawscloudwatchConnection {
             .build();
   }
 
-  public String getId() {
-    return id;
-  }
-
   public AmazonCloudWatch getAwsCloudWatch() {
     return awsCloudWatch;
   }
 
   public void invalidate() {
     this.awsCloudWatch.shutdown();
-    // do something to invalidate this connection!
   }
 }
