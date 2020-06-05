@@ -24,7 +24,7 @@ Please see the [Release notes](https://github.com/lpalliyaguru/mule-aws-cloudwat
 Visit the [Documentation](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/blob/4.x/doc/user-manual.adoc)
 
 # Manual 
-Visit the [User manual](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/doc/user-manual.adoc)
+Visit the [User manual](https://github.com/lpalliyaguru/mule-aws-cloudwatch-connector/blob/4.x/doc/user-manual.adoc)
 
 # Reporting Issues 
 :construction:
