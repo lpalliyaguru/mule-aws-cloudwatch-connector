@@ -155,7 +155,7 @@ public class MuleawscloudwatchLogsOperations {
     for (Map datum : datums) {
       list.add(new MetricDatum()
               .withMetricName((String)datum.get("metricName"))
-              .withValue((Double) datum.get("unitValue"))
+              .withValue(Double.valueOf((Integer) datum.get("value")))
               .withDimensions(dimension)
       );
     }

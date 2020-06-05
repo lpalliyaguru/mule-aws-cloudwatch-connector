@@ -9,7 +9,7 @@
           http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch http://www.mulesoft.org/schema/mule/mule-aws-cloudwatch/current/mule-mule-aws-cloudwatch.xsd">
 
     <mule-aws-cloudwatch:config name="config">
-        <mule-aws-cloudwatch:connection awsAccessKey="${aws.access_key}" awsSecretKey="${aws.secret_key}"  awsRegion="ap-southeast-1" />
+        <mule-aws-cloudwatch:connection awsAccessKey="${aws.access_key}" awsSecretKey="${aws.secret_key}"  awsRegion="eu-west-1" />
     </mule-aws-cloudwatch:config>
 
     <flow name="putLogEventsFlow">
@@ -28,10 +28,10 @@
     <flow name="putMetricDataFlow">
         <mule-aws-cloudwatch:put-metric-data
                 config-ref="config"
-                metricNameSpace="AIP/Ops"
-                dimensionName="Contact"
-                dimensionValue="contact"
-                metricDatums="#[[{metricName: 'metricName', unitValue: 2.10}]]"
+                metricNameSpace="AIP/INT/CRM"
+                dimensionName="direction"
+                dimensionValue="sf/crmod"
+                metricDatums="#[[{metricName: 'Accounts', value: 1.00}]]"
         />
     </flow>
 </mule>

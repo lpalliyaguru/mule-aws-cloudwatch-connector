@@ -58,8 +58,6 @@ Maven dependency:
 
 Follow these steps to configure the parameters of the connector in a flow:
 
-. Drag the connector onto the canvas, then select it to open the Properties Editor console.
-
 1. After you install the connector, it will appear in your mule pallete.
 2. Simply drag and drop the connector in to the canvas.
 3. After that you need to configure the connector.
@@ -70,4 +68,39 @@ Follow these steps to configure the parameters of the connector in a flow:
 
 +
 image::global_config.png[global_config]
++
+
+=== Operations
+
+1. link:https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutLogEvents.html[Put Log Events]
+This operations can be used to send a log message to AWS Cloudwatch
+
++
+image::put-log-events-config.png[put-log-events-config]
++
+
++
+image::put-log-events-properties.png[put-log-events-properties]
++
+
+2. link:https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_FilterLogEvents.html[Filter Log Events]
+This operation can be used to search log messages from AWS cloudwatch
+
++
+image::filter-log-events-config.png[filter-log-events-config]
++
+
++
+image::filter-log-events-properties.png[filter-log-events-properties]
++
+
+3. link:https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricData.html[Put Metric Data]
+
+
++
+image::put-metric-data-config.png[put-metric-data-config]
++
+
++
+image::put-metric-data-properties.png[put-metric-data-properties]
 +
